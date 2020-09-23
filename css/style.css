@@ -1,0 +1,148 @@
+body {
+
+    background-image: url("../img/calculatorwithbg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    /*background: linear-gradient(90deg, rgba(51, 110, 101, 1) 0%, rgba(9, 121, 106, 1) 36%, rgba(0, 212, 255, 1) 78%);*/
+}
+
+p {
+    margin: 0;
+}
+
+#container {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1000px;
+    height: 560px;
+}
+
+#calculator {
+    width: 400px;
+    height: 700px;
+    background-color: #000;
+    position: relative;
+    border-radius: 8px;
+    margin: 0 auto;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#result {
+    height: 190px;
+    flex-grow: 1;
+    /*padding: 6px 0;*/
+}
+
+#keyboard {
+    height: 400px;
+    text-align: center;
+}
+
+#output {
+    width: 100%;
+    height: 100%;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial,
+    sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    text-align: right;
+    color: #fff;
+    position: relative;
+    padding-top: 5px;
+}
+
+.number, .operator {
+    cursor: pointer;
+}
+
+.number, .operator, .clear {
+    width: 85.5px;
+    height: 85.5px;
+    margin: 7px;
+    border-radius: 50%;
+    float: left;
+    /*font-weight: bolder;*/
+    font-size: 38px;
+    border-width: 0;
+}
+
+.operator:nth-child(3),
+.operator:nth-child(7),
+.operator:nth-child(11),
+.operator:nth-child(15),
+.operator:nth-child(18) {
+
+    background-color: #ff9500;
+    color: #fff;
+
+}
+
+.operator:nth-child(3):focus,
+.operator:nth-child(7):focus,
+.operator:nth-child(11):focus,
+.operator:nth-child(15):focus {
+    background-color: #fff;
+    color: #ff9500;
+}
+
+.clear,
+.operator:nth-child(2) {
+
+    background-color: #d4d4d2;
+
+}
+
+.number:nth-child(4),
+.number:nth-child(5),
+.number:nth-child(6),
+.number:nth-child(8),
+.number:nth-child(9),
+.number:nth-child(10),
+.number:nth-child(12),
+.number:nth-child(13),
+.number:nth-child(14),
+.number:nth-child(16),
+.operator:nth-child(17) {
+
+    background-color: #505050;
+    color: #fff;
+
+}
+
+
+#zero, #clear {
+    text-align: center;
+    width: 186px !important;
+    border-radius: 50px;
+    padding-right: 100px;
+}
+
+
+button:focus {
+    outline: none;
+}
+
+#output #output-value {
+    position: absolute;
+    right: 4%;
+    bottom: 7%;
+    width: 360px;
+    height: 100px;
+    text-align: right;
+    font-size: 60px;
+    background-color: #000;
+    border: none;
+    color: #fff;
+}
+
+label {
+    display: none;
+}
+
+input:focus {
+    outline: none;
+}
+
+#output-value::placeholder {
+    color: #fff;
+}
